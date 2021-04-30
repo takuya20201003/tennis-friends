@@ -23,3 +23,5 @@
 | Column  | Type  | Option |
 | ------- | ----- | ------ |
 | message | text  |        |
+
+- belongs_to :user
