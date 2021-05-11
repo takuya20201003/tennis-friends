@@ -32,7 +32,11 @@
     </div>
     <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}) %>
   </div>
-    
+
+  <div class="field">
+    <%= f.label :age, "年齢" %><br />
+    <%= f.text_field :age %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
