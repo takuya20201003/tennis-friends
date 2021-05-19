@@ -38,6 +38,32 @@
     <%= f.text_field :age %>
   </div>
 
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class='form-text'>レベル</div>
+    </div>
+    <%= f.collection_select(:level_id, Level.all, :id, :name, {}) %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">都道府県</label>
+    </div>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {} )%>
+  </div>
+
+  <div class="field">
+    <%= f.label :municipality, "市町村" %><br />
+    <%= f.text_field :municipality %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">休日</label>
+    </div>
+    <%= f.collection_select(:holiday_id, Holiday.all, :id, :name, {} )%>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
