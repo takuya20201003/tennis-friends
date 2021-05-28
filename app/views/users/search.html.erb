@@ -1,2 +1,16 @@
-<h1>Users#search</h1>
-<p>Find me in app/views/users/search.html.erb</p>
+<h1>
+  検索結果
+</h1>
+
+<% if @results.lenght !=0 %>
+  <% @results.each do |result| %>
+    <br>
+    <li>
+      <%= result.name %>
+    </li>
+  <% end %>
+<% else %>
+  該当する人はいませんでした
+<% end %>
+<br>
+<%= link_to 'トップページへ戻る', root_path %>
