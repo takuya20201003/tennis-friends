@@ -1,19 +1,19 @@
 class UsersController < ApplicationController
 
-  before_action :search_user, only: [:index,:search]
+  before_action :search_user, only: [:index, :search]
   
   def index
-    @users = Users.all
+    @users = User.all
   end
 
   def search
-    @result = @u.includes(:category)
+    @results = @u.includes(:category)
   end
 
   private
 
-  def search_product
-    @u = User.ransack(params[:u])
+  def search_user
+    @u = User.ransack(params[:q])
   end
-  
+
 end

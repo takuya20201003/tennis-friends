@@ -2,16 +2,30 @@
   検索
 </h1>
 <%= search_form_for @u, url: users_search_path do |f| %>
-  <%= f.label :name_eq, 'フリーワード' %>
-  <%= f.collection_select :name_eq, @users, :name, :name, include_blank: '指定なし' %>
+  <%= f.label :gender_eq, '性別' %>
+  <%= f.collection_select :gender_id_eq, @users, :gender, :gender, include_blank: '指定なし' %>
+  <br>
+  <%= f.label :age_eq, '年齢' %>
+  <%= f.collection_select :age_eq, @users, :age, :age, include_blank: '指定なし' %>
+  <br>
+  <%= f.label :level_eq, 'レベル' %>
+  <%= f.collection_select :level_id_eq, @users, :level, :level, include_blank: '指定なし' %>
+  <br>
+  <%= f.label :prefecture_eq, '都道府県' %>
+  <%= f.collection_select :prefecture_id_eq, @users, :prefecture, :prefecture, include_blank: '指定なし' %>
+  <br>
+  <%= f.label :municipality_eq, '市町村' %>
+  <%= f.search_field :municipality_cont %>
+  <br>
+  <%= f.label :holiday_eq, '休日' %>
+  <%= f.collection_select :holiday_id_eq, @users, :holiday, :holiday, include_blank: '指定なし' %>
   <br>
   <%= f.submit '検索' %>
 <% end %>
 
-<%# 検索結果一覧 %>
 <% @users.each do |user| %>
   <br>
   <li>
-    <%= user.name %>
+    <%= user.gender_id %>
   </li>
 <% end %>

@@ -13,15 +13,3 @@
 | prefecture_id      | integer | null: false               |
 | municipality       | string  | null: false               |
 | holiday_id         | integer | null: false               |
-
-### Association
-
-- has_many :messages
-
-## messages テーブル
-
-| Column  | Type  | Option |
-| ------- | ----- | ------ |
-| message | text  |        |
-
-- belongs_to :user
