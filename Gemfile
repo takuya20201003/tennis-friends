@@ -60,3 +60,6 @@ gem 'devise'
 gem 'active_hash'
 
 gem 'ransack'
+
+gem 'bootstrap','~> 4.1.1'
+gem 'jquery-rails'
