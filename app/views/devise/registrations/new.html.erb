@@ -48,9 +48,9 @@
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">都道府県</label>
+      <label class='form-text'>都道府県</div>
     </div>
-    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {} )%>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {} ) %>
   </div>
 
   <div class="field">
@@ -60,7 +60,7 @@
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">休日</label>
+      <label class="form-text">休日</div>
     </div>
     <%= f.collection_select(:holiday_id, Holiday.all, :id, :name, {} )%>
   </div>
@@ -68,6 +68,7 @@
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
 <% end %>
 
 <%= render "devise/shared/links" %>
