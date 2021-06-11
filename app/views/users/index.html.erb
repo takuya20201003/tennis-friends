@@ -6,22 +6,22 @@
 </h1>
 <%= search_form_for @u, url: users_search_path do |f| %>
   <%= f.label :gender_eq, '性別' %>
-  <%= f.collection_select :gender_id_eq, @users, :gender, :gender, include_blank: '指定なし' %>
+  <%= f.collection_select :gender_id_eq, @users, :gender_id, :gender_id, include_blank: '指定なし' %>
   <br>
   <%= f.label :age_eq, '年齢' %>
   <%= f.collection_select :age_eq, @users, :age, :age, include_blank: '指定なし' %>
   <br>
   <%= f.label :level_eq, 'レベル' %>
-  <%= f.collection_select :level_id_eq, @users, :level, :level, include_blank: '指定なし' %>
+  <%= f.collection_select :level_id_eq, @users, :level_id, :level_id, include_blank: '指定なし' %>
   <br>
   <%= f.label :prefecture_eq, '都道府県' %>
-  <%= f.collection_select :prefecture_id_eq, @users, :prefecture, :prefecture, include_blank: '指定なし' %>
+  <%= f.collection_select :prefecture_id_eq, @users, :prefecture_id, :prefecture_id, include_blank: '指定なし' %>
   <br>
   <%= f.label :municipality_eq, '市町村' %>
   <%= f.search_field :municipality_cont %>
   <br>
   <%= f.label :holiday_eq, '休日' %>
-  <%= f.collection_select :holiday_id_eq, @users, :holiday, :holiday, include_blank: '指定なし' %>
+  <%= f.collection_select :holiday_id_eq, @users, :holiday_id, :holiday_id, include_blank: '指定なし' %>
   <br>
   <%= f.submit '検索' %>
 <% end %>
