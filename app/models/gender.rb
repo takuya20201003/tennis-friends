@@ -4,4 +4,6 @@ class Gender < ActiveHash::Base
     { id: 2, name: '男性' },
     { id: 3, name: '女性' }
   ]
+  belongs_to :user
+  
 end

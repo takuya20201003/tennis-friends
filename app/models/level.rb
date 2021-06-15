@@ -7,4 +7,7 @@ class Level < ActiveHash::Base
     { id: 5, name: '初中級' },
     { id: 6, name: '初級' }
   ]
+
+  belongs_to :user
+  
 end

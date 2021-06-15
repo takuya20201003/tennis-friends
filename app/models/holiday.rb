@@ -4,4 +4,7 @@ class Holiday < ActiveHash::Base
     { id: 2, name: '土日祝' },
     { id: 3, name: '不定休' }
   ]
+
+  belongs_to :user
+  
   end
